@@ -1,4 +1,4 @@
-from flask import *
+from flask import Flask, session, url_for, Blueprint, request
 from flask_sqlalchemy import SQLAlchemy
 import json
 from extensions import db
