@@ -14,3 +14,8 @@ clients = Blueprint('clients', __name__)
 async def index():
     clients = db.session.query(Client).all()
     return render_template('clients/index.jinja', clients=clients)
+
+@clients.route('/clients/new', methods=['GET', 'POST'])
+async def create_client():
+    if request.method == 'GET':
+        return render_template('clients/create.jinja')

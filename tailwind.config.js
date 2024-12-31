@@ -7,6 +7,10 @@ module.exports = {
   plugins: [
     require('daisyui'),
     require('flowbite/plugin'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/container-queries'),
   ],
 }
 
