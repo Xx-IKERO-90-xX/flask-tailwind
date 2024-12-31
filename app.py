@@ -9,11 +9,10 @@ with open('settings.json') as data:
     settings = json.load(data)
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:ikero9090@192.168.1.99/CLIENTES"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:ikero9090@127.0.0.1/CLIENTES"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
-
 app.register_blueprint(clients)
 
 if __name__ == '__main__':

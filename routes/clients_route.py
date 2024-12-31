@@ -12,4 +12,5 @@ clients = Blueprint('clients', __name__)
 
 @clients.route('/')
 async def index():
-    return render_template('clients/index.jinja')
+    clients = db.session.query(Client).all()
+    return render_template('clients/index.jinja', clients=clients)
